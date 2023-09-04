@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap');
+:root{
+    font-size: 16px;
+    font-family:'Ubuntu';
+    --light-blue: #D9F0FF;
+    --blue: #A3D5FF;
+    --heavy-blue: #75b3da;
+    --heavy-purple: #6F73D2;
+    --purple: #7681B3;
+    --dark-purple :hwb(229 38% 45%);
+    --white : rgb(208, 222, 224,0.8);
+    --black : rgba(27, 25, 37, 0.7) ;
+    
+}
+::-webkit-scrollbar{
+    width:8px;
+}
+::-webkit-scrollbar-track{
+    background-color:var(--dark-purple);
+}
+::-webkit-scrollbar-thumb{
+    background-color:var(--purple);
+}
+*,::before,::after{
+    box-sizing: border-box;
+    margin: 0 ;
+    padding: 0;
+    
+}
+a{
+    text-decoration: none;
+}
+html{
+    background-color: var(--light-blue);
+}
+body{
+    width:100%;
+
+}
+/*---------------------------------------------nav bar---------------------------------------------*/
+nav{
+    background-color:var(--purple);
+    width: 6rem;
+    height:100vh;
+    position:fixed;
+    top:0;
+    left:0;
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    transition:all 0.25s ease-out 0.05s;
+    z-index: 10;
+    
+}
+.container{
+    height:calc(100% - 15vh);
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width:100%;
+}
+
+.top{
+    display:flex;
+    align-items: center;
+}
+.top img{
+    margin:0 1.5rem;
+    width:50px;
+    height:50px;
+    cursor:pointer;
+    transition: all 0.3s ease;
+}
+.top span{
+    font-family: 'Ubuntu';
+    font-size: 1.3rem;
+    font-weight:700;
+    overflow: hidden;
+    text-align: center;
+    margin-left:0.6rem;
+    color:var(--black);
+    transform-origin: left;
+    width: 0rem;
+    height:1.3rem;
+    transition: width 0.15s ease;
+}
+.top span::after{
+    content: "";
+    
+    top: 4.7rem;
+    left:5.3rem;
+    position:absolute;
+    height:3rem;
+    width:0rem;
+    border-radius: 10px;
+    background-color:hwb(229 38% 45%);
+    z-index: -1;
+    transform-origin: left;
+    transition: width 0.35s ease;
+
+}
+nav:hover .top span{
+    width:6rem;
+}
+nav:hover .top span::after{
+    width:8.8rem;
+}
+
+.middle{
+    width:100%;
+    height: 50vh;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    
+}
+.items{
+    display:flex;
+    align-items: center;
+    height: 6rem;
+    width:100%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+   
+    
+}
+.items i{
+    margin:0 2rem;
+    font-size:2rem;
+    color:var(--black);
+
+}
+.items span{
+    font-family: 'Ubuntu';
+    font-size:1.3rem;
+    margin-left:0.7rem;
+    color: var(--black);
+    line-break: none;
+    font-weight:700;
+    display:none;
+    transition: all 0.2s ease ;
+    
+    
+}
+
+.items:hover {
+    background-color: var(--dark-purple);
+}
+/*.items:hover i , .items:hover span{
+    color:#D9F0FF;
+    
+}*/
+#user{
+    font-size: 2.285rem;
+}
+
+nav:hover {
+    width:16rem;
+    transition:all 0.25s ease-out ;
+
+
+}
+nav:hover .items span{
+    display:block;
+    
+    
+    
+
+}
+nav:hover .top img{
+    transform: rotate(90deg);
+}
+
+
+
+/*---------------------------------------------home---------------------------------------------*/
+main{
+    margin-left:6rem;
+    background-color: var(--light-blue);
+    position:relative;
+
+}
+.banner{
+    
+    width:100%;
+    height:85vh;
+    background-image: url("/src/pic/bg_720p.png");
+    background-position: center;
+    background-size: cover;
+}
+.down{
+    width:fit-content;
+    margin:0 auto;
+    margin-bottom: 5rem;
+    position:relative;
+    
+}
+.down i{
+    font-size:4rem;
+    opacity: 0.6;
+    transition: all 0.2s ease;
+    color:var(--purple);
+}
+.down span:hover i {
+    opacity: 0.8;
+    font-size:4.2rem;
+    
+}
+
+
+
+
+
+
+.wave{
+    background-color: var(--blue);
+}
+
+
+/*---------------------------------------------about me---------------------------------------------*/
+
+.about{
+    background-color:var(--blue);
+    height:110vh;
+    width:100%;
+    position:relative;
+    
+
+}
+.me h1{
+    font-family: 'Ubuntu';
+    font-weight:700;
+    font-size:5rem;
+    color:var(--purple);
+    margin: 6% 8%;
+
+}
+.me p{
+    font-family: 'Ubuntu';
+    font-size:1.5rem;
+    color:var(--purple);
+    margin: 6% 8%;
+    line-height: 2.5rem;
+    letter-spacing: 0.11rem;
+}
+.hard{
+    font-weight: 700;
+    font-style: italic;
+}
+
+.me{
+    width: 40%;
+    
+    position:relative;
+    top: 22%;
+    left: 5%;
+    border: solid var(--purple) 10px;
+    border-radius: 30px;;
+}
+.me .container{
+    background-color: #6F73D2;
+    
+}
+
+.profile{
+    position:absolute;
+    top: 12vh;
+    right: 10vw;
+    
+    
+}
+.profile img{
+    
+    
+    width:520px;
+    height:auto;
+    
+}
+.wave-skill{
+    background-color: var(--heavy-blue);
+}
+/*---------------------------------------------skill-------------------------------------------*/
+.skill{
+    background-color: var(--heavy-blue);
+    width:100%;
+    height:120vh;
+    display: flex;
+    position:relative;
+    justify-content: center;
+
+}
+.big-container{
+    margin-top:5vh;
+    height:90vh;
+    box-shadow: 0px 50px 50px var(--blue) ;
+    overflow: hidden;
+    
+}
+
+.skill .big-container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 70px;
+    border: solid var(--light-blue) 10px;
+    width:80vw;
+}
+.skill .header{
+    position:relative;
+    font-size:6rem;
+    font-family:'Ubuntu';
+    font-weight: 700;
+    letter-spacing: 1.5rem;
+    color:var(--light-blue);
+    margin-top: 7vh;
+    margin-bottom:10vh;
+    width: 460px;
+   
+}
+.skill .header::before {
+    left: -15%;
+    border-radius: 0 0 0 0;
+    border-left: var(--light-blue) solid 0px;
+    
+}
+.skill .header::after {
+    
+    right:-15%;
+    border-radius: 0 0 0 0;
+    border-right: var(--light-blue) solid 0px;
+   
+}
+
+.skill .header::after ,.skill .header::before{
+    content: "";
+    position:absolute;
+    top:50%;
+    width: 0px;
+    height: 0px;
+    background:transparent;
+    transform: translate(0,-50%);
+    border-top: var(--light-blue) solid 0px;
+    border-bottom: var(--light-blue) solid 0px;
+    transition: height 0.2s ease 0.3s , width 0.3s ease, border 0.05s 0.5s ,border-radius 0.15s 0.35s;
+}
+
+.skill .header:hover::before{
+    height:150px;
+    width:300px;
+    border-radius: 35px 0 0 35px;
+    border-left: var(--light-blue) solid 10px;
+    border-top: var(--light-blue) solid 10px;
+    border-bottom: var(--light-blue) solid 10px;
+    transition: height 0.2s ease, width 0.3s ease 0.2s;
+}
+.skill .header:hover::after{
+    height:150px;
+    width:300px;
+    border-radius: 0 35px 35px 0;
+    border-right: var(--light-blue) solid 10px;
+    border-top: var(--light-blue) solid 10px;
+    border-bottom: var(--light-blue) solid 10px;
+    transition: height 0.2s ease, width 0.3s ease 0.2s;
+}
+
+
+.skill-container{
+    width:100%;
+}
+
+.nav-skill{
+    display:flex;
+    width:80%;
+    justify-content: space-around;
+    margin-bottom:10vh ;
+    border-bottom: #D9F0FF solid 5px;
+    border-top: var(--light-blue) solid 5px;
+    padding: 15px;
+}
+.nav-skill h2{
+    color:var(--light-blue);
+    font-size:2rem;
+    font-family:'Ubuntu';
+    cursor: pointer;
+    transition:all 0.2s ease;
+}
+
+h2[name="coding"]{
+    color:aliceblue;
+    text-shadow: 0 0 10px white;
+
+}
+
+
+.coding{
+    display:flex;
+   
+    
+}
+
+.design, .platform{
+    display:none;
+}
+.select{
+    width:100%;
+    justify-content: space-around;
+}
+
+.items-skill{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+    width:  220px;
+    height: 180px;
+    border: solid var(--light-blue) 4px;
+    border-radius:20px;
+    box-shadow:10px 10px 10px var(--blue);
+    cursor: pointer;
+}
+.items-skill i {
+    color:var(--light-blue);
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+}
+.items-skill h2{
+    font-family:'Ubuntu';
+    font-size: 2.2rem;
+    color:var(--light-blue);
+}
+
+
+
+
+
+
+
+
+
